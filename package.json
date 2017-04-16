@@ -10,7 +10,19 @@
   },
   "babel": {
     "presets": [
-      "env",
+      ["env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "safari >= 10",
+              "ie >= 11"
+            ],
+            "modules": false,
+            "loose": false
+          }
+        }
+      ],
       "react"
     ]
   },
