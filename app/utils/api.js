@@ -1,14 +1,13 @@
 import Axios from 'axios'
 
 export function battle (players) {
-  return Axios.all([players.map(getUserData)])
+  return Axios.all(players.map(getUserData))
     .then(sortPlayers)
     .catch(handleError)
 }
 
 function getProfile (username) {
   return Axios.get('https://api.github.com/users/' + username).then(user => {
-    console.log(user.data)
     return user.data
   })
 }
