@@ -10,9 +10,25 @@ var config = {
     publicPath: '/'
   },
   module: {
-    rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
-      { test: /\.(css)$/, use: ['style-loader', 'css-loader'] }
+    rules: [{
+        test: /\.(js)$/,
+        use: 'babel-loader',
+        include: [
+          path.resolve('app'),
+        ]
+      },
+      {
+        test: /\.(css)$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          }
+        ]
+      }
     ]
   },
   devServer: {
