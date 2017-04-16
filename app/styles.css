@@ -97,6 +97,18 @@ li {
   font-weight: bold;
 }
 
+.reset {
+  border: none;
+  background: transparent;
+  color: #d0021b;
+  width: 100%;
+  text-align: center;
+}
+
+.reset:hover {
+  cursor: pointer;
+}
+
 .row {
   display: flex;
   justify-content: space-around;
