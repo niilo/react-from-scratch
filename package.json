@@ -33,6 +33,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.1",
+    "inferno-compat": "^3.0.4",
     "preact": "^8.1.0",
     "preact-compat": "^3.14.3",
     "query-string": "^4.3.2",

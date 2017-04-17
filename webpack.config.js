@@ -11,13 +11,12 @@ var config = {
   },
   resolve: {
     alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat'
+      react: 'inferno-compat',
+      'react-dom': 'inferno-compat'
     }
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js)$/,
         use: 'babel-loader',
         include: [
