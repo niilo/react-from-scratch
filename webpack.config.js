@@ -9,12 +9,21 @@ var config = {
     filename: 'index_bundle.js',
     publicPath: '/'
   },
+  resolve: {
+    alias: {
+      react: 'preact-compat',
+      'react-dom': 'preact-compat'
+    }
+  },
   module: {
     rules: [
       {
         test: /\.(js)$/,
         use: 'babel-loader',
-        include: [path.resolve('app')]
+        include: [
+          path.resolve('app'),
+          path.resolve('node_modules/preact-compat/src')
+        ]
       },
       {
         test: /\.(css)$/,
