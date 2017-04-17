@@ -10,12 +10,11 @@ var config = {
     publicPath: '/'
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(js)$/,
         use: 'babel-loader',
-        include: [
-          path.resolve('app'),
-        ]
+        include: [path.resolve('app')]
       },
       {
         test: /\.(css)$/,
